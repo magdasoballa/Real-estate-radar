@@ -1,0 +1,86 @@
+[
+    {
+        "title": "Spacious apartment in the city center",
+        "description": "Modern apartment with an area of 80m2 overlooking the city panorama. It consists of 2 bedrooms, a living room, a kitchen, and a bathroom. Fully furnished and equipped.",
+        "price": 350000,
+        "image": "https://www.shutterstock.com/pl/image-photo/modern-homes-town-houses-2195504819",
+        "dateOfIssue": "09-02-2023"
+    },
+    {
+        "title": "Single-family house with a large garden",
+        "description": "Spacious single-family house with a beautiful 1200m2 garden. It has 4 bedrooms, a large living room, an office, 2 bathrooms, and a garage for two cars.",
+        "price": 480000,
+        "image": "",
+        "dateOfIssue": "09-07-2023"
+    },
+    {
+        "title": "Luxurious villa by the sea",
+        "description": "Elegant villa located by the sea with a private beach and pool. It has 6 bedrooms, a large living room with a fireplace, a kitchen, an office, a gym, and a sauna.",
+        "price": 1500000,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLOOojMeXeGOuQivAIgWv28bDNOe9dMlmIKw&usqp=CAU",
+        "dateOfIssue": "05-02-2023"
+    },
+    {
+        "title": "Apartment in a building with a pool",
+        "description": "Apartment with an area of 60m2 in a modern building with a pool and gym. It has 2 bedrooms, a living room with a kitchenette, a bathroom, and a balcony overlooking the city panorama.",
+        "price": 280000,
+        "image": "https://example.com/apartment3.jpg",
+        "dateOfIssue": "09-01-2024"
+    },
+    {
+        "title": "Duplex apartment in the city center",
+        "description": "Modern two-level apartment with an area of 100m2 located in the heart of the city. It consists of 3 bedrooms, a spacious living room, a kitchen, and 2 bathrooms.",
+        "price": 420000,
+        "image": "https://example.com/apartment3.jpg",
+        "dateOfIssue": "06-01-2023"
+    },
+    {
+        "title": "Cozy apartment in a tenement house",
+        "description": "Charming apartment with an area of 50m2 in a restored tenement house. It has a bedroom, a living room with a kitchenette, and a bathroom. Perfect for a single person or a couple.",
+        "price": 180000,
+        "image": "https://example.com/apartment4.jpg",
+        "dateOfIssue": "09-12-2022"
+    },
+    {
+        "title": "Apartment with mountain view",
+        "description": "Comfortable apartment with a terrace and a view of the mountains. It has 2 bedrooms, a living room with a fireplace, a kitchen, and a bathroom. Located in a quiet area.",
+        "price": 320000,
+        "image": "https://example.com/apartment6.jpg",
+        "dateOfIssue": "09-12-2022"
+    },
+    {
+        "title": "House in the countryside with a large plot",
+        "description": "Traditional house in the countryside with a large plot. It has 3 bedrooms, a spacious living room, a kitchen, an office, and two bathrooms. Ideal for a family or those seeking peace and quiet.",
+        "price": 380000,
+        "image": "https://example.com/house2.jpg",
+        "dateOfIssue": "09-11-2023"
+    },
+    {
+        "title": "Apartment on the beach",
+        "description": "Modern apartment located directly on the beach. It has 2 bedrooms, a living room with a kitchenette, a bathroom, and a terrace with a sea view.",
+        "price": 460000,
+        "image": "https://example.com/apartment6.jpg",
+        "dateOfIssue": "11-06-2023"
+    },
+    {
+        "title": "Luxury villa in the mountains",
+        "description": "Wonderful villa with a pool and garden among the mountain peaks. It has 5 bedrooms, a spacious living room with a fireplace, a kitchen, an office, and a gym.",
+        "price": 2200000,
+        "image": "https://example.com/villa2.jpg",
+        "dateOfIssue": "09-04-2023"
+    },
+    {
+        "title": "Apartment in a historic building",
+        "description": "Spacious apartment with an area of 70m2 in a historic 19th-century building. It has 2 bedrooms, a living room with a fireplace, a kitchen, and a bathroom.",
+        "price": 390000,
+        "image": "https://example.com/apartment7.jpg",
+        "dateOfIssue": "09-11-2023"
+    },
+    {
+        "title": "Apartment in a prestigious location",
+        "description": "Exclusive apartment in the heart of the city, just a few steps from the main square. It has 2 bedrooms, a spacious living room, a kitchen, and a bathroom.",
+        "price": 1200000,
+        "image": "https://example.com/villa3.jpg",
+        "dateOfIssue": "09-11-2022"
+    }
+]

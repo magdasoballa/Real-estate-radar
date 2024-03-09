@@ -1,0 +1,29 @@
+@import "@/scss/variables";
+
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+  a {
+    color: #000;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .home-heading {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgb(127, 17, 224, 0.5);
+      color: $primary-color;
+      font-family: "Madimi One", sans-serif;
+    }
+    .home-icon {
+      font-size: 30px;
+      margin-right: 10px;
+      position: absolute;
+      left: 30px;
+    }
+  }
+}
