@@ -1,8 +1,7 @@
-import { Route, Router } from 'react-router';
+import { Route } from 'react-router';
 import { BrowserRouter, Link, Routes } from 'react-router-dom';
 import './App.scss'
 import ListingDetails from './components/HouseDetail/HouseDetails';
-import HousesList from './components/HousesList/HousesList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import Home from './components/Home/Home';
@@ -20,7 +19,7 @@ const App = () => {
           </Link>
         </div>
 
-        <h1 className="home-heading">Real estate radar</h1>
+        <h1 className="home-heading">Real Estate Radar</h1>
       </div>
       <Routes>
         <Route path="/" element={<Home />} />

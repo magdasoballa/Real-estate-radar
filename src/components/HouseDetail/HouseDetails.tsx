@@ -1,7 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import listingsData from '../../realEstateList.json';
+import { formatDate, formatPrice, isNewHome } from '../../utils/helpers';
+
 import './HouseDetails.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBath, faBed, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const HouseDetails = () => {
   const { id } = useParams();
@@ -9,11 +13,20 @@ const HouseDetails = () => {
 
   return (
     <div className="listing-item">
-      <img src={listing.image} alt={listing.title} className="listing-image" />
-      <div className="listing-content">
-        <h2 className="listing-title">{listing.title}</h2>
-        <p className="listing-description">{listing.description}</p>
-        <p className="listing-price">${listing.price}</p>
+      <img src={listing.image} alt={listing?.title} className="listing-image" />
+      <div className="listing-info">
+        <div>
+          {isNewHome(listing?.dateOfIssue) && <div className="new-home-badge">New Home</div>}
+          <h2 className="listing-title">{listing?.title}</h2>
+
+          <div className='listing-icons'><FontAwesomeIcon icon={faBed} /> {listing?.rooms} <FontAwesomeIcon icon={faBath} /> {listing?.bathroom}
+          </div>
+          <div><FontAwesomeIcon icon={faGlobe} /> {listing?.country}
+          </div>
+        </div>
+        <div className='listing-description'>{listing?.description}</div>
+        <div className="listing-price">${formatPrice(listing?.price)}</div>
+        <div className="listing-date">Listed on {formatDate(listing?.dateOfIssue)}</div>
       </div>
     </div>
   );

@@ -16,6 +16,12 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s;
             margin-bottom: 20px;
+            border: 1px solid lightgray;
+            width: 100%;
+            max-height: 300px;
+            &:hover {
+                transform: scale(1.01);
+            }
 
             &:hover {
                 box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -23,54 +29,89 @@
 
             .home-listing-link {
                 text-decoration: none;
-            }
 
-            .home-listing-image {
-                width: 100%;
-                height: auto;
-                max-height: 200px;
-                object-fit: cover;
-                transition: transform 0.3s;
+                .home-listing-content {
+                    display: flex;
+                    .home-listing-info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .home-listing-title {
+                            font-size: 24px;
+                            font-weight: bold;
+                            margin-top: 10px;
+                        }
+                        .home-listing-icons {
+                            margin: 10px 0;
+                        }
+                        .home-listing-date {
+                            font-size: 16px;
+                            margin-bottom: 10px;
+                        }
 
-                &:hover {
-                    transform: scale(1.05);
-                }
-            }
+                        .home-listing-description {
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                        }
 
-            .home-listing-content {
-                padding: 20px;
+                        .home-listing-price {
+                            font-size: 26px;
+                            font-weight: bold;
+                            color: gray;
+                            margin: 10px 0;
+                        }
 
-                .home-listing-title {
-                    font-size: 18px;
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                }
-
-                .home-listing-description {
-                    font-size: 14px;
-                    margin-bottom: 10px;
-                }
-
-                .home-listing-price {
-                    font-size: 16px;
-                    font-weight: bold;
-                    color: #007bff;
-                }
-
-                .home-listing-button {
-                    background-color: $primary-color;
-                    color: #fff;
-                    border: none;
-                    border-radius: 4px;
-                    padding: 8px 16px;
-                    cursor: pointer;
-                    transition: background-color 0.3s;
-
-                    &:hover {
-                        background-color: $secondary-color;
+                        .home-listing-button {
+                            background-color: $primary-color;
+                            color: #fff;
+                            border: none;
+                            border-radius: 4px;
+                            padding: 8px 16px;
+                            cursor: pointer;
+                            transition: background-color 0.3s;
+                            margin-top: 20px;
+                            &:hover {
+                                background-color: $secondary-color;
+                            }
+                        }
+                    }
+                    .home-listing-pic {
+                        width: 50%;
+                        margin-right: 20px;
+                        transition: transform 0.3s;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+                        height: 300px;
+                    }
+                    .new-home-badge {
+                        background-color: $green-primary;
+                        width: 94px;
+                        height: 24px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        border-radius: 20px;
+                        padding: 8px 6px 2px 6px;
+                        font-size: 14px;
+                        text-align: center;
+                        display: inline-block;
+                        margin-top: 10px;
                     }
                 }
             }
         }
+    }
+
+    .sorting-option {
+        padding: 8px 12px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        outline: none;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .no-results {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
     }
 }
