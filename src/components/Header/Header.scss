@@ -1,0 +1,27 @@
+@import "@/scss/variables";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: $background-color;
+
+
+    .home-heading {
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgb(127, 17, 224, 0.1);
+        color: $primary-color;
+        font-family: "Madimi One", sans-serif;
+    }
+
+    .home-icon {
+        font-size: 30px;
+        margin-right: 10px;
+        position: absolute;
+        left: 30px;
+    }
+}

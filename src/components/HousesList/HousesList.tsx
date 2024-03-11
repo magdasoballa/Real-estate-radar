@@ -33,8 +33,10 @@ const HousesList = () => {
         const queryParams = new URLSearchParams(location.search);
         const selectedCountryParam = queryParams.get('country');
         const selectedRoomParam = queryParams.get('rooms');
+        const selectedSortByParam = queryParams.get('sortBy');
         selectedCountryParam && setSelectedCountry(selectedCountryParam || '');
         selectedRoomParam && setSelectedRooms(selectedRoomParam || '')
+        selectedSortByParam && setSortBy(selectedSortByParam || '')
     }, [location.search]);
 
     useEffect(() => {
@@ -54,26 +56,40 @@ const HousesList = () => {
         }
     }, [sortBy]);
 
-    const queryParams = new URLSearchParams();
-
     const handleSortChange = (event) => {
-        setSortBy(event.target.value);
-    };
-
-    const handleChangeRooms = (event) => {
-        setSelectedRooms(event.target.value);
-        event.preventDefault();
+        const selectedValue = event.target.value;
+        setSortBy(selectedValue);
         const queryParams = new URLSearchParams(location.search);
-        queryParams.set('rooms', event.target.value);
+        if (selectedValue) {
+            queryParams.set('sortBy', selectedValue);
+        } else {
+            queryParams.delete('sortBy');
+        }
         const queryString = queryParams.toString();
         navigate(`?${queryString}`);
     };
 
-    const handleChangeCountry = (event) => {
-        setSelectedCountry(event.target.value);
-        event.preventDefault();
+    const handleChangeRooms = (event) => {
+        const selectedValue = event.target.value;
+        setSelectedRooms(selectedValue);
         const queryParams = new URLSearchParams(location.search);
-        if (event.target.value) queryParams.set('country', event.target.value);
+        if (selectedValue) {
+            queryParams.set('rooms', selectedValue);
+        } else {
+            queryParams.delete('rooms');
+        }
+        const queryString = queryParams.toString();
+        navigate(`?${queryString}`);
+    };
+    const handleChangeCountry = (event) => {
+        const selectedValue = event.target.value;
+        setSelectedCountry(selectedValue);
+        const queryParams = new URLSearchParams(location.search);
+        if (selectedValue) {
+            queryParams.set('country', selectedValue);
+        } else {
+            queryParams.delete('country');
+        }
         const queryString = queryParams.toString();
         navigate(`?${queryString}`);
     };
@@ -82,10 +98,13 @@ const HousesList = () => {
         setShowAll(true);
         setSelectedCountry('');
         setSelectedRooms('');
+        setSortBy('')
+        navigate('/');
     };
 
     const sortedListings = () => {
-        const listingsCopy = showAll ? listingsData : filteredItems;
+        const listingsCopy = showAll ? [...listingsData] : [...filteredItems];
+        console.log(listingsCopy)
         switch (sortBy) {
             case 'dateAsc':
                 return listingsCopy.sort((a, b) => new Date(a.dateOfIssue).getTime() - new Date(b.dateOfIssue).getTime());
