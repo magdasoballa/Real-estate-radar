@@ -1,51 +1,69 @@
 @import "@/scss/variables";
 
-.listing-item {
+.listing-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    .listing-image {
-        width: 800px;
-        height: 500px;
-        margin-right: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-        border-radius: 15px;
-    }
-    .listing-info {
+    background-color: #fff;
+    padding: 20px 0;
+
+    .listing-item {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 500px;
-        .listing-title {
-            font-size: 32px;
-        }
-        .listing-icons {
-            margin: 5px 0;
-        }
-        .listing-description {
-            font-size: 20px;
-            text-align: justify;
-            max-width: 500px;
+        width: 90%;
+
+        .listing-image {
+            width: 800px;
+            height: 450px;
+            margin-right: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
         }
 
-        .listing-price {
-            font-size: 26px;
-            font-weight: bold;
-        }
+        .listing-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-        .new-home-badge {
-            background-color: $green-primary;
-            width: 94px;
-            height: 24px;
-            color: #fff;
-            text-transform: uppercase;
-            border-radius: 20px;
-            padding: 8px 6px 2px 6px;
-            font-size: 14px;
-            text-align: center;
-            display: inline-block;
-            margin-top: 10px;
+            .listing-title {
+                font-size: 32px;
+                margin-block-start: 0
+            }
+
+            .listing-icons {
+                margin: 5px 0;
+            }
+
+            .listing-description {
+                font-size: 20px;
+                text-align: justify;
+                max-width: 500px;
+            }
+
+            .listing-price {
+                font-size: 26px;
+                font-weight: bold;
+            }
+
+            .new-home-badge {
+                background-color: $green-primary;
+                width: 94px;
+                height: 24px;
+                color: #fff;
+                text-transform: uppercase;
+                border-radius: 20px;
+                padding: 8px 6px 2px 6px;
+                font-size: 14px;
+                text-align: center;
+                display: inline-block;
+                margin-top: 10px;
+            }
         }
     }
+}
+
+.back-button {
+    border: none;
+    background-color: #fff;
+    padding: 10px 0 0 20px;
+    font-size: 15px;
 }

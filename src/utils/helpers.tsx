@@ -27,7 +27,6 @@ export const isNewHome = (dateOfIssue) => {
     const currentDate = new Date();
     const threeMonthsAgo = new Date();
     threeMonthsAgo.setMonth(currentDate.getMonth() - 3);
-
     const listingDate = new Date(dateOfIssue);
     return listingDate > threeMonthsAgo;
 };

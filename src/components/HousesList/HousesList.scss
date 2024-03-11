@@ -6,9 +6,13 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    background-color: $background-color;
+    padding: 0 0 20px 0;
+    margin-bottom: 50px;
 
     ul {
-        width: 60%;
+        padding-inline-start: 0;
+
         .home-listing-item {
             background-color: #ffffff;
             border-radius: 8px;
@@ -18,12 +22,10 @@
             margin-bottom: 20px;
             border: 1px solid lightgray;
             width: 100%;
-            max-height: 300px;
-            &:hover {
-                transform: scale(1.01);
-            }
+            justify-content: space-between;
 
             &:hover {
+                transform: scale(1.01);
                 box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             }
 
@@ -32,21 +34,26 @@
 
                 .home-listing-content {
                     display: flex;
+
                     .home-listing-info {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
+
                         .home-listing-title {
                             font-size: 24px;
                             font-weight: bold;
                             margin-top: 10px;
                         }
+
                         .home-listing-icons {
                             margin: 10px 0;
                         }
+
                         .home-listing-date {
                             font-size: 16px;
                             margin-bottom: 10px;
+
                         }
 
                         .home-listing-description {
@@ -70,11 +77,14 @@
                             cursor: pointer;
                             transition: background-color 0.3s;
                             margin-top: 20px;
+                            width: 50%;
+
                             &:hover {
                                 background-color: $secondary-color;
                             }
                         }
                     }
+
                     .home-listing-pic {
                         width: 50%;
                         margin-right: 20px;
@@ -82,6 +92,7 @@
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
                         height: 300px;
                     }
+
                     .new-home-badge {
                         background-color: $green-primary;
                         width: 94px;
@@ -100,18 +111,54 @@
         }
     }
 
-    .sorting-option {
-        padding: 8px 12px;
-        font-size: 16px;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-        outline: none;
-        cursor: pointer;
-        margin-right: 10px;
+    .sorting-options {
+        background-color: #fff;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 25px 0;
+
+        .sorting-option {
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            outline: none;
+            cursor: pointer;
+            margin-right: 10px;
+            width: 220px;
+        }
     }
+
     .no-results {
         list-style-type: none;
         display: flex;
         justify-content: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        .home-listing-item {
+            max-height: none;
+            flex-direction: column;
+
+            .home-listing-pic {
+                width: 100%;
+                height: auto;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .home-listing-info {
+                width: 100%;
+                padding: 0 20px;
+                text-align: center;
+
+                .home-listing-date {
+                    padding-bottom: 10px;
+                }
+            }
+        }
     }
 }
