@@ -3,8 +3,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import listingsData from '../../realEstateList.json';
 import { formatDate, formatPrice, isNewHome } from '../../utils/helpers';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-
-
 import './HouseDetails.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBath, faBed, faGlobe } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +11,6 @@ const HouseDetails = () => {
   const { id } = useParams();
   const listing = listingsData[parseInt(id)];
   const navigate = useNavigate();
-
 
   return (
     <>

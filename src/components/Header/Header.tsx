@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 
-export const Header = () => {
+const Header = () => {
     return (
         <div className='header'>
             <div className='home-icon'>

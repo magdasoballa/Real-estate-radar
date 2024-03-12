@@ -3,16 +3,17 @@
 .listing-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     background-color: #fff;
     padding: 20px 0;
+    height: calc(100vh - 330px);
 
     .listing-item {
         display: flex;
         width: 90%;
 
         .listing-image {
-            width: 800px;
+            width: 55%;
             height: 450px;
             margin-right: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
@@ -66,4 +67,5 @@
     background-color: #fff;
     padding: 10px 0 0 20px;
     font-size: 15px;
+    margin: 10px 0;
 }
